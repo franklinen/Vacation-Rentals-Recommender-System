@@ -2,3 +2,4 @@ The data analysis was performed using python 3 on Jupyter notebook.
 Some analysis was also performed using Tableau Public.
 Analysis aimed at exploring relationship with variables before modelling
 it is also hoped to observe trends in variables over time
+Data analysis was accomplished with a semi-cleaned form of the data achieved after some data wrangling
