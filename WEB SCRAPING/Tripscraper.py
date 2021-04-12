@@ -1,20 +1,19 @@
 import os, sys, traceback
 import pandas as pd
 import time
-import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
 
 try:
     # Location of Chrome Driver
-    os.chdir(r'D:\Training\TripAdvisor')
+    os.chdir(r'C:\Users\MAIN\TripAdvisor')
 
     # Trip Advisor Root Link for Scraping
     url_root = 'https://www.tripadvisor.ca/Search?default_scope=&singleSearchBox=&geo=153339&pid=3826&redirect=&startTime=1565651307571&uiOrigin=MASTHEAD&q=vacation%20rentals&supportedSearchTypes=find_near_stand_alone_query&enableNearPage=true&returnTo=https%253A__2F____2F__www__2E__tripadvisor__2E__ca__2F__&searchSessionId=40DC37297CF1527F8D491D54C694D91E1565651271714ssid&social_typeahead_2018_feature=true&sid=40DC37297CF1527F8D491D54C694D91E1565651519966&ssrc=v&rf=3'
 
     # Output File
-    writer = pd.ExcelWriter(r'D:\Training\TripAdvisor\Trip Advisor - Attempt5.xlsx', engine = 'xlsxwriter')
+    writer = pd.ExcelWriter(r'C:\Users\MAIN\TripAdvisor - Attempt5.xlsx', engine = 'xlsxwriter')
 
     # Datasets
     search_results = pd.DataFrame(columns=['Title','Bubble_Count','Review_Count','Address','Review_Block','Reviews','Page_Num'])
@@ -316,17 +315,25 @@ except:
     raise
 finally:
     # Exporting Search Results to File
-    if search_results:
+    if not search_results.empty:
         search_results.drop_duplicates(subset=['Title','Bubble_Count','Review_Count','Address','Review_Block','Reviews','Page_Num'], keep=False)
         search_results.to_excel(writer, index=False, sheet_name='Search_Results')
     # Exporting Results Overview to File
-    if reviews_overview:
+    if not reviews_overview.empty:
         reviews_overview.drop_duplicates(subset=['Reviews', 'Overview_n_about_the_owner', 'Amenities', 'Rates', 'Fees', 'Map_information'], keep=False)
         reviews_overview.to_excel(writer, index=False, sheet_name='Reviews_Overview')
     # Exporting Search Results to File
-    if reviews_results:
+    if not reviews_results.empty:
         reviews_results.drop_duplicates(subset=['Reviews', 'Review_Comments'], keep=False)
         reviews_results.to_excel(writer, index=False, sheet_name='Reviews_Results')
     writer.save()
     writer.close()
 
+
+
+#search_results.head()
+#reviews_overview.head()
+#reviews_results.head()
+#search_results.to_csv('C:/Users/MAIN/Desktop/Rentals.csv', encoding='utf-8')
+#reviews_results.to_csv('C:/Users/MAIN/Desktop/Reviews.csv', encoding='utf-8')
+#reviews_overview.to_csv('C:/Users/MAIN/Desktop/Overview.csv', encoding='utf-8')
