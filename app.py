@@ -38,21 +38,21 @@ def vectorize_text_to_cosine_mat(data):
 @st.cache
 def get_recommendation(title,cosine_sim_mat,df,num_of_rec=10):
 	# indices of the course
-	course_indices = pd.Series(df.index,index=df['course_title']).drop_duplicates()
+	rental_indices = pd.Series(df.index,index=df['Title']).drop_duplicates()
 	# Index of course
-	idx = course_indices[title]
+	idx = rental_indices[title]
 
 	# Look into the cosine matr for that index
 	sim_scores =list(enumerate(cosine_sim_mat[idx]))
 	sim_scores = sorted(sim_scores,key=lambda x: x[1],reverse=True)
-	selected_course_indices = [i[0] for i in sim_scores[1:]]
-	selected_course_scores = [i[0] for i in sim_scores[1:]]
+	selected_rental_indices = [i[0] for i in sim_scores[1:]]
+	selected_rental_scores = [i[0] for i in sim_scores[1:]]
 
 	# Get the dataframe & title
-	result_df = df.iloc[selected_course_indices]
-	result_df['similarity_score'] = selected_course_scores
-	final_recommended_courses = result_df[['course_title','similarity_score','url','price','num_subscribers']]
-	return final_recommended_courses.head(num_of_rec)
+	result_df = df.iloc[selected_rental_indices]
+	result_df['similarity_score'] = selected_rental_scores
+	final_recommended_rentals = result_df[['Title','similarity_score','Reviews','Rating']]
+	return final_recommended_rentals.head(num_of_rec)
 
 
 RESULT_TEMP = """
@@ -70,7 +70,7 @@ box-shadow:0 0 15px 5px #ccc; background-color: #a8f0c6;
 # Search For Course 
 @st.cache
 def search_term_if_not_found(term,df):
-	result_df = df[df['course_title'].str.contains(term)]
+	result_df = df[df['Title'].str.contains(term)]
 	return result_df
 
 
