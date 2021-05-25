@@ -16,7 +16,7 @@ import selenium
 import webdriver
 import options
 import WebdriverException
-Enter Search Term __Vacation__Rentals__ on website Tripadvisor.ca
+Enter Search Term *Vacation Rentals* on website Tripadvisor.ca
 Scrape search result based on specified parameters.
 Recommendation: Run the webscraper on a GPU or a distributed system for faster result
 
@@ -34,11 +34,11 @@ Commands
 List Projects
 gcloud projects list
 To change to the project you created you can use
-_gcloud__config__set__project__your_projectname_
+*gcloud config set project your project_name*
 To check for the current project you use
-_gcloud__config__get-value__project_
+*gcloud config get-value project*
 To deploy our app we will be using
-_gcloud__app__deploy_
+*gcloud app deploy*
 
 By
 Frankline Ononiwu
