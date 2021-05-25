@@ -34,11 +34,11 @@ Commands
 * List Projects
 	* gcloud projects list
 * To change to the project you created you can use
-	* gcloud config set project your project_name*
+	* **gcloud config set project your project_name**
 * To check for the current project you use
-	* gcloud config get-value project*
+	* **gcloud config get-value project**
 * To deploy our app we will be using
-	* gcloud app deploy*
+	* **gcloud app deploy**
 
 By
 Frankline Ononiwu
