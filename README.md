@@ -26,9 +26,9 @@ Wrap recommender model in a streamlit application and run application
 Ensure the dataset is in the same envrionment as the web app 
 
 ### Requirements For App Deployment #####
-Dockerfile
-app.yaml : configuration
-Gcloud sdk
+* **Dockerfile**
+* **app.yaml : configuration**
+* **Gcloud sdk**
 
 Commands
 * List Projects
