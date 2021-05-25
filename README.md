@@ -7,23 +7,23 @@ representation of the vacaton rental available in the country. the scraping was 
 in python to get the needed variables. Exploratory Data Analysis as Explained in the EDA section focused mainly on exploring the relationshp with the variables and the frequency of
 data occurence. There was no need to apply feature engineering to the dataset. however, Excel was used to seperate the location of the city and province.
 
-Natural Language Processing was performed on the reviews variable. The NLP method used was the Bag of Words Model. 
+Natural Language Processing was performed on the reviews variable.  
 After preprocessing, classical models and deep learning model was applied on the dataset to give modelling scores. 
 The recommender system was built using Content-based Recommender system after processing the data with TFID(Term Frequency Vectorizer)
 
 ### Requirements for webscraping
-import selenium
-import webdriver
-import options
-import WebdriverException
-Enter Search Term *Vacation Rentals* on website Tripadvisor.ca
-Scrape search result based on specified parameters.
-Recommendation: Run the webscraper on a GPU or a distributed system for faster result
+* import selenium
+* import webdriver
+* import options
+* import WebdriverException
+* Enter Search Term *Vacation Rentals* on website Tripadvisor.ca
+* Scrape search result based on specified parameters.
+* Recommendation: Run the webscraper on a GPU or a distributed system for faster result
 
 ### Requirements for Web Application
-Install Streamlit and components
-Wrap recommender model in a streamlit application and run application
-Ensure the dataset is in the same envrionment as the web app 
+* Install Streamlit and components
+* Wrap recommender model in a streamlit application and run application
+* Ensure the dataset is in the same envrionment as the web app 
 
 ### Requirements For App Deployment #####
 * **Dockerfile**
