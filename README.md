@@ -1,4 +1,4 @@
-# A-Recommender-system-for-vacation-Rentals-Using-Natural-Language-Processing-and-Deep-Learning
+# A Recommender system for Vacation Rentals Using Natural Language Processing #
 The project is carried out to build a Recommender system for Vacation Rentals in Canada. We use Natural Language processing, and Prediction algorithms model Vacation Reviews and ratings 
 for building the Recommender system. Data was obtained by scraping the website www.tripadvisor.ca with the keyword 'Vacation Rentals'.
 
@@ -11,7 +11,7 @@ Natural Language Processing was performed on the reviews variable.
 After preprocessing, classical models and deep learning model was applied on the dataset to give modelling scores. 
 The recommender system was built using Content-based Recommender system after processing the data with TFID(Term Frequency Vectorizer)
 
-### Requirements for webscraping
+### Requirements for webscraping ###
 * import selenium
 * import webdriver
 * import options
@@ -20,12 +20,12 @@ The recommender system was built using Content-based Recommender system after pr
 * Scrape search result based on specified parameters.
 * Recommendation: Run the webscraper on a GPU or a distributed system for faster result
 
-### Requirements for Web Application
+### Requirements for Web Application ###
 * Install Streamlit and components
 * Wrap recommender model in a streamlit application and run application
 * Ensure the dataset is in the same envrionment as the web app 
 
-### Requirements For App Deployment #####
+### Requirements For App Deployment ###
 * **Dockerfile**
 * **app.yaml : configuration**
 * **Gcloud sdk**
