@@ -1,8 +1,8 @@
-### Requirements For Deployment #####
+#### Requirements For Deployment #####
 * Dockerfile
 * app.yaml : configuration
 * Gcloud sdk
-Commands
+#### Commands ####
 * List Projects
 ** gcloud projects list
 * To change to the project you created you can use
