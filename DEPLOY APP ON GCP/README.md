@@ -4,7 +4,7 @@
 * Gcloud sdk
 #### Commands ####
 * List Projects
-** _gcloud__projects__list
+** _gcloud__projects__list_
 * To change to the project you created you can use
 ** _gcloud__config__set__project__your_projectname_
 * To check for the current project you use
