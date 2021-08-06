@@ -1,2 +1,2 @@
 #!/bin/sh
-streamlit run streamapp.py
+streamlit run app.py
